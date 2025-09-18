@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternSphere - AI-Powered Internship Platform | Connect with Top Companies</title>
+    <meta name="description" content="India's leading AI-powered internship platform connecting students with top companies. Get personalized recommendations, skill assessments, and career guidance.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>InternSphere</h2>
+                </div>
+            </div>
+            <div class="navbar-menu">
+                <div class="nav-links hidden-mobile">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#companies" class="nav-link">Companies</a>
+                    <a href="#resources" class="nav-link">Learning</a>
+                    <a href="#about" class="nav-link">About</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="language-toggle" id="languageToggle">
+                        <span class="flag">🇬🇧</span>
+                        <span id="languageText">English</span>
+                    </button>
+                    <button class="btn btn--outline voice-search" id="voiceSearchBtn" title="Voice Search">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button class="btn btn--outline" id="signInBtn">Sign In</button>
+                    <button class="btn btn--primary" id="signUpBtn">Sign Up</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="mobile-nav" id="mobileNav">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#companies" class="nav-link">Companies</a>
+                    <a href="#resources" class="nav-link">Learning</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="mobile-nav-actions">
+                        <button class="btn btn--outline" id="mobileSignInBtn">Sign In</button>
+                        <button class="btn btn--primary" id="mobileSignUpBtn">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <main class="landing-page" id="landingPage">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1754728138/pplx_project_search_images/75a6fb527d46d22f2e7bc492d8ae537c19dab01a.png" alt="Modern Office Workspace" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-trophy"></i>
+                        <span id="heroBadgeText">India's #1 AI-Powered Internship Platform</span>
+                    </div>
+                    <h1 id="heroTitle">Unlock Your Career with AI-Powered Internship Matching</h1>
+                    <p id="heroSubtitle">Connect with 2000+ top companies, get personalized recommendations, and fast-track your career with our advanced AI matching system</p>
+                    <div class="hero-search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="landingSearchInput" placeholder="Search for internships (e.g. 'Data Science in Bangalore')">
+                        <button id="landingSearchBtn" class="btn btn--primary">Search</button>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="btn btn--primary btn--lg hero-cta" id="heroGetStarted">
+                            <i class="fas fa-rocket"></i>
+                            <span>Get Started Free</span>
+                        </button>
+                        <button class="btn btn--outline btn--lg" id="heroExplore">
+                            <i class="fas fa-play"></i>
+                            <span>Watch Demo</span>
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <strong>25M+</strong>
+                            <span>Students</span>
+                        </div>
+                        <div class="stat">
+                            <strong>50K+</strong>
+                            <span>Live Internships</span>
+                        </div>
+                        <div class="stat">
+                            <strong>85%</strong>
+                            <span>Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 id="activeUsersCount">25M+</h3>
+                        <p id="activeUsersLabel">Active Users</p>
+                        <span class="stat-growth">+15% this month</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 id="internshipsCount">50K+</h3>
+                        <p id="internshipsLabel">Live Internships</p>
+                        <span class="stat-growth">+22% new postings</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 id="companiesCount">2000+</h3>
+                        <p id="companiesLabel">Partner Companies</p>
+                        <span class="stat-growth">Fortune 500 included</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 id="successRateCount">85%</h3>
+                        <p id="successRateLabel">Placement Success</p>
+                        <span class="stat-growth">Industry leading</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="howItWorksTitle">How InternSphere Works</h2>
+                    <p id="howItWorksSubtitle">Get matched with perfect internships in just 3 simple steps</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-user-plus"></i>
+                            <span class="step-number">1</span>
+                        </div>
+                        <h3 id="step1Title">Create Smart Profile</h3>
+                        <p id="step1Desc">Build your AI-enhanced profile with skills, projects, and preferences</p>
+                        <div class="step-features">
+                            <span><i class="fas fa-check"></i> AI Skill Assessment</span>
+                            <span><i class="fas fa-check"></i> Portfolio Integration</span>
+                            <span><i class="fas fa-check"></i> Career Goal Mapping</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-brain"></i>
+                            <span class="step-number">2</span>
+                        </div>
+                        <h3 id="step2Title">AI-Powered Matching</h3>
+                        <p id="step2Desc">Our advanced algorithm finds perfect internship matches for you</p>
+                        <div class="step-features">
+                            <span><i class="fas fa-check"></i> 95%+ Match Accuracy</span>
+                            <span><i class="fas fa-check"></i> Skill Gap Analysis</span>
+                            <span><i class="fas fa-check"></i> Real-time Updates</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                            <span class="step-number">3</span>
+                        </div>
+                        <h3 id="step3Title">Apply & Succeed</h3>
+                        <p id="step3Desc">One-click applications and track your journey to success</p>
+                        <div class="step-features">
+                            <span><i class="fas fa-check"></i> One-Click Apply</span>
+                            <span><i class="fas fa-check"></i> Application Tracking</span>
+                            <span><i class="fas fa-check"></i> Interview Prep</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Opportunities -->
+        <section class="featured-opportunities">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="featuredTitle">Featured Opportunities</h2>
+                    <p id="featuredSubtitle">Hand-picked internships from top companies</p>
+                </div>
+                <div class="featured-tabs">
+                    <button class="tab-btn active" data-category="all">All</button>
+                    <button class="tab-btn" data-category="technology">Technology</button>
+                    <button class="tab-btn" data-category="analytics">Analytics</button>
+                    <button class="tab-btn" data-category="design">Design</button>
+                    <button class="tab-btn" data-category="marketing">Marketing</button>
+                </div>
+                <div class="internships-carousel">
+                    <div class="internships-grid" id="featuredInternships">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="view-all-container">
+                    <button class="btn btn--outline btn--lg" id="viewAllOpportunities">
+                        View All 50,000+ Opportunities
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner Companies -->
+        <section class="partner-companies" id="companies">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="partnersTitle">Trusted by Leading Companies</h2>
+                    <p id="partnersSubtitle">Join students from top companies worldwide</p>
+                </div>
+                <div class="companies-grid" id="partnerCompaniesGrid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="success-stories" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="successTitle">Success Stories</h2>
+                    <p id="successSubtitle">Real students, real success stories</p>
+                </div>
+                <div class="testimonials-grid" id="testimonialsList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Resources -->
+        <section class="learning-resources" id="resources">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="learningTitle">Learning Resources</h2>
+                    <p id="learningSubtitle">Top platforms to upgrade your skills</p>
+                </div>
+                <div class="resources-grid" id="landingPageResources">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2 id="newsletterTitle">Stay Updated</h2>
+                        <p id="newsletterSubtitle">Get the latest internship opportunities delivered to your inbox</p>
+                    </div>
+                    <div class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" id="newsletterEmail">
+                            <button class="btn btn--primary" id="subscribeBtn">
+                                <i class="fas fa-paper-plane"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Profile Builder -->
+    <div class="profile-builder hidden" id="profileBuilder">
+        <div class="container">
+            <div class="profile-form-container">
+                <div class="form-header">
+                    <h2 id="profileBuilderTitle">Build Your Professional Profile</h2>
+                    <p id="profileBuilderSubtitle">Tell us about yourself to get personalized recommendations</p>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="step-indicator" id="stepIndicator">Step 1 of 5</div>
+                </div>
+
+                <!-- Step 1: Basic Info -->
+                <form class="profile-step active" id="step1">
+                    <div class="step-content">
+                        <h3 id="step1FormTitle">Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" id="nameLabel">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" id="emailLabel">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" id="phoneLabel">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" id="locationLabel">Location</label>
+                                <select class="form-control" id="location" required>
+                                    <option value="">Select City</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" id="photoLabel">Profile Photo (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="profilePhoto" accept="image/*">
+                                <label for="profilePhoto" class="file-upload-label">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Upload Photo</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--primary btn--lg btn--full-width" id="nextStep1">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Step 2: Academic Info -->
+                <form class="profile-step" id="step2">
+                    <div class="step-content">
+                        <h3 id="step2FormTitle">Academic Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" id="universityLabel">University/College</label>
+                                <input type="text" class="form-control" id="university" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" id="degreeLabel">Degree</label>
+                                <input type="text" class="form-control" id="degree" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" id="yearLabel">Year of Study</label>
+                                <select class="form-control" id="year" required>
+                                    <option value="">Select Year</option>
+                                    <option value="1">1st Year</option>
+                                    <option value="2">2nd Year</option>
+                                    <option value="3">3rd Year</option>
+                                    <option value="4">4th Year</option>
+                                    <option value="graduate">Graduate</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" id="cgpaLabel">CGPA/Percentage</label>
+                                <input type="text" class="form-control" id="cgpa" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" id="fieldLabel">Field of Study</label>
+                            <input type="text" class="form-control" id="fieldOfStudy" required>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--outline" id="prevStep2">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn--primary" id="nextStep2">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Step 3: Skills & Portfolio -->
+                <form class="profile-step" id="step3">
+                    <div class="step-content">
+                        <h3 id="step3FormTitle">Skills & Portfolio</h3>
+                        <div class="form-group">
+                            <label class="form-label" id="skillsLabel">Technical Skills</label>
+                            <input type="text" class="form-control" id="skillInput" placeholder="Type a skill and press Enter">
+                            <div class="skills-container" id="skillsContainer"></div>
+                            <div class="suggested-skills">
+                                <span class="label">Popular Skills:</span>
+                                <button type="button" class="skill-suggestion" data-skill="Python">Python</button>
+                                <button type="button" class="skill-suggestion" data-skill="JavaScript">JavaScript</button>
+                                <button type="button" class="skill-suggestion" data-skill="React">React</button>
+                                <button type="button" class="skill-suggestion" data-skill="Machine Learning">ML</button>
+                                <button type="button" class="skill-suggestion" data-skill="Data Science">Data Science</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" id="githubLabel">GitHub Profile (Optional)</label>
+                            <input type="url" class="form-control" id="github" placeholder="https://github.com/username">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" id="linkedinLabel">LinkedIn Profile (Optional)</label>
+                            <input type="url" class="form-control" id="linkedin" placeholder="https://linkedin.com/in/username">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" id="portfolioLabel">Portfolio Website (Optional)</label>
+                            <input type="url" class="form-control" id="portfolio" placeholder="https://yourportfolio.com">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--outline" id="prevStep3">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn--primary" id="nextStep3">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Step 4: Preferences -->
+                <form class="profile-step" id="step4">
+                    <div class="step-content">
+                        <h3 id="step4FormTitle">Internship Preferences</h3>
+                        <div class="form-group">
+                            <label class="form-label" id="sectorsLabel">Preferred Sectors</label>
+                            <div class="checkbox-grid" id="sectorsGroup"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" id="durationLabel">Preferred Duration</label>
+                                <select class="form-control" id="duration" required>
+                                    <option value="">Select Duration</option>
+                                    <option value="1-3">1-3 months</option>
+                                    <option value="3-6">3-6 months</option>
+                                    <option value="6-12">6-12 months</option>
+                                    <option value="12+">12+ months</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" id="stipendLabel">Minimum Stipend</label>
+                                <select class="form-control" id="stipend">
+                                    <option value="">No preference</option>
+                                    <option value="0-10000">₹0 - ₹10,000</option>
+                                    <option value="10000-20000">₹10,000 - ₹20,000</option>
+                                    <option value="20000-30000">₹20,000 - ₹30,000</option>
+                                    <option value="30000+">₹30,000+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" id="workModeLabel">Work Mode Preference</label>
+                            <div class="radio-group">
+                                <label class="radio-item">
+                                    <input type="radio" name="workMode" value="remote">
+                                    <span>Remote</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="workMode" value="onsite">
+                                    <span>On-site</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="workMode" value="hybrid">
+                                    <span>Hybrid</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="workMode" value="any">
+                                    <span>Any</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--outline" id="prevStep4">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn--primary" id="nextStep4">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Step 5: AI Assessment -->
+                <form class="profile-step" id="step5">
+                    <div class="step-content">
+                        <h3 id="step5FormTitle">AI Skill Assessment</h3>
+                        <p id="step5Subtitle">Take a quick assessment to validate your skills</p>
+                        <div class="assessment-container">
+                            <div class="assessment-card">
+                                <div class="assessment-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>AI-Powered Assessment</h4>
+                                <p>Our AI will assess your technical skills and provide personalized recommendations</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 15-minute adaptive test</li>
+                                    <li><i class="fas fa-check"></i> Skill gap analysis</li>
+                                    <li><i class="fas fa-check"></i> Learning path recommendations</li>
+                                    <li><i class="fas fa-check"></i> Industry benchmark comparison</li>
+                                </ul>
+                                <button type="button" class="btn btn--primary" id="startAssessment">
+                                    <i class="fas fa-play"></i>
+                                    Start Assessment
+                                </button>
+                                <button type="button" class="btn btn--outline" id="skipAssessment">
+                                    Skip for now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--outline" id="prevStep5">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn--primary btn--lg" id="completeProfile">
+                            <i class="fas fa-check"></i>
+                            Complete Profile
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Dashboard -->
+    <div class="student-dashboard hidden" id="studentDashboard">
+        <div class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <h3 id="sidebarUserName">John Doe</h3>
+                        <p id="sidebarUserRole">Computer Science Student</p>
+                        <div class="user-score">
+                            <i class="fas fa-star"></i>
+                            <span>95% Profile Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-tab="overview">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="recommendations">
+                    <i class="fas fa-magic"></i>
+                    <span>AI Recommendations</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="applications">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Applications</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="skills">
+                    <i class="fas fa-code"></i>
+                    <span>Skill Development</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="interviews">
+                    <i class="fas fa-video"></i>
+                    <span>Interviews</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="achievements">
+                    <i class="fas fa-trophy"></i>
+                    <span>Achievements</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="profile">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="dashboard-main">
+            <!-- Overview Tab -->
+            <div class="dashboard-content active" id="overview">
+                <div class="dashboard-header">
+                    <div class="header-content">
+                        <h1 id="welcomeMessage">Good morning, John! 👋</h1>
+                        <p id="welcomeSubtext">Ready to take your career to the next level?</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn--outline" id="viewRecommendationsBtn">
+                            <i class="fas fa-magic"></i>
+                            View AI Matches
+                        </button>
+                        <button class="btn btn--primary" id="browseInternshipsBtn">
+                            <i class="fas fa-search"></i>
+                            Browse Internships
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-blue">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>12</h3>
+                            <p>Applications Sent</p>
+                            <span class="stat-change positive">+3 this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-green">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>45</h3>
+                            <p>Profile Views</p>
+                            <span class="stat-change positive">+12 this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-purple">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>8</h3>
+                            <p>Bookmarked</p>
+                            <span class="stat-change">Saved</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-orange">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>3</h3>
+                            <p>Interviews</p>
+                            <span class="stat-change positive">Scheduled</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card recommended-section">
+                        <div class="card-header">
+                            <h3><i class="fas fa-magic"></i> AI Recommendations</h3>
+                            <button class="btn btn--sm btn--outline">View All</button>
+                        </div>
+                        <div class="recommendations-list" id="dashboardRecommendations">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> Skill Progress</h3>
+                            <button class="btn btn--sm btn--outline">Take Assessment</button>
+                        </div>
+                        <div class="skill-progress-list" id="skillProgressList">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3><i class="fas fa-clock"></i> Recent Activity</h3>
+                    <div class="activity-timeline" id="activityTimeline">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other dashboard tabs will be populated by JavaScript -->
+            <div class="dashboard-content" id="recommendations">
+                <div class="recommendations-page">
+                    <div class="page-header">
+                        <h2><i class="fas fa-magic"></i> AI-Powered Recommendations</h2>
+                        <p>Personalized internships matched to your profile with 95%+ accuracy</p>
+                    </div>
+                    <div class="search-and-filters-bar">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Search by title, company, or skill...">
+                        </div>
+                        <select id="categoryFilter" class="form-control">
+                            <!-- Populated by JS -->
+                        </select>
+                        <select id="locationFilter" class="form-control">
+                            <!-- Populated by JS -->
+                        </select>
+                    </div>
+                    <div class="recommendation-filters">
+                        <button class="filter-btn active" data-filter="all">All Matches</button>
+                        <button class="filter-btn" data-filter="high">High Match (90%+)</button>
+                        <button class="filter-btn" data-filter="medium">Medium Match (75%+)</button>
+                        <button class="filter-btn" data-filter="learning">Learning Opportunities</button>
+                    </div>
+                    <div class="recommendations-grid" id="allRecommendations">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content" id="applications">
+                <div class="applications-page">
+                    <div class="page-header">
+                        <h2><i class="fas fa-file-alt"></i> My Applications</h2>
+                        <p>Track your internship applications and their status</p>
+                    </div>
+                    <div class="applications-stats">
+                        <div class="app-stat">
+                            <span class="count">12</span>
+                            <span class="label">Total</span>
+                        </div>
+                        <div class="app-stat">
+                            <span class="count">3</span>
+                            <span class="label">Under Review</span>
+                        </div>
+                        <div class="app-stat">
+                            <span class="count">2</span>
+                            <span class="label">Interview</span>
+                        </div>
+                        <div class="app-stat">
+                            <span class="count">1</span>
+                            <span class="label">Offer</span>
+                        </div>
+                    </div>
+                    <div class="applications-list" id="applicationsList">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content" id="skills">
+                <div class="skills-page">
+                    <div class="page-header">
+                        <h2><i class="fas fa-code"></i> Skill Development</h2>
+                        <p>Enhance your skills with personalized learning paths</p>
+                    </div>
+                    <div class="skills-overview">
+                        <div class="skill-categories" id="skillCategories">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="learning-resources" id="learningResourcesList">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content" id="interviews">
+                <div class="interviews-page">
+                    <div class="page-header">
+                        <h2><i class="fas fa-video"></i> Interview Center</h2>
+                        <p>Manage your interviews and prepare for success</p>
+                    </div>
+                    <div class="interview-calendar" id="interviewCalendar">
+                        <!-- Calendar view will be here -->
+                    </div>
+                    <div class="interview-prep">
+                        <h3>Interview Preparation</h3>
+                        <div class="prep-resources">
+                            <div class="prep-card">
+                                <i class="fas fa-question-circle"></i>
+                                <h4>Common Questions</h4>
+                                <p>Practice with frequently asked questions</p>
+                                <button class="btn btn--outline">Start Practice</button>
+                            </div>
+                            <div class="prep-card">
+                                <i class="fas fa-video"></i>
+                                <h4>Mock Interviews</h4>
+                                <p>Schedule practice interviews with mentors</p>
+                                <button class="btn btn--outline">Book Session</button>
+                            </div>
+                            <div class="prep-card">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Resume Review</h4>
+                                <p>Get expert feedback on your resume</p>
+                                <button class="btn btn--outline">Upload Resume</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content" id="achievements">
+                <div class="achievements-page">
+                    <div class="page-header">
+                        <h2><i class="fas fa-trophy"></i> Your Achievements</h2>
+                        <p>Track your progress and unlock new milestones</p>
+                    </div>
+                    <div class="achievements-grid" id="achievementsList">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content" id="profile">
+                <div class="profile-page">
+                    <div class="page-header">
+                        <h2><i class="fas fa-user-cog"></i> Profile Settings</h2>
+                        <p>Manage your profile and preferences</p>
+                    </div>
+                    <div class="profile-settings" id="profileSettings">
+                        <!-- Profile editing form will be here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-dashboard hidden" id="adminDashboard">
+        <div class="container">
+            <div class="admin-header">
+                <h1><i class="fas fa-shield-alt"></i> Admin Dashboard</h1>
+                <div class="admin-actions">
+                    <button class="btn btn--outline">
+                        <i class="fas fa-download"></i>
+                        Export Data
+                    </button>
+                    <button class="btn btn--primary">
+                        <i class="fas fa-plus"></i>
+                        Add New Internship
+                    </button>
+                </div>
+            </div>
+
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>25,000,000</h3>
+                        <p>Total Users</p>
+                        <span class="stat-trend positive">+15% ↗</span>
+                    </div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>50,000</h3>
+                        <p>Active Internships</p>
+                        <span class="stat-trend positive">+22% ↗</span>
+                    </div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>1,250</h3>
+                        <p>Applications Today</p>
+                        <span class="stat-trend">+5% ↗</span>
+                    </div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>2,000+</h3>
+                        <p>Partner Companies</p>
+                        <span class="stat-trend positive">+8% ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-tabs">
+                <button class="admin-tab-btn active" data-tab="analytics">
+                    <i class="fas fa-chart-bar"></i>
+                    Analytics
+                </button>
+                <button class="admin-tab-btn" data-tab="internships">
+                    <i class="fas fa-briefcase"></i>
+                    Internships
+                </button>
+                <button class="admin-tab-btn" data-tab="users">
+                    <i class="fas fa-users"></i>
+                    Users
+                </button>
+                <button class="admin-tab-btn" data-tab="companies">
+                    <i class="fas fa-building"></i>
+                    Companies
+                </button>
+                <button class="admin-tab-btn" data-tab="reports">
+                    <i class="fas fa-file-chart"></i>
+                    Reports
+                </button>
+            </div>
+
+            <div class="admin-tab-content active" id="analytics">
+                <div class="analytics-dashboard">
+                    <div class="chart-container" style="position: relative; height: 400px;">
+                        <canvas id="analyticsChart"></canvas>
+                    </div>
+                    <div class="analytics-metrics">
+                        <div class="metric-card">
+                            <h4>Conversion Rate</h4>
+                            <p class="metric-value">18.5%</p>
+                            <span class="metric-trend positive">+2.3%</span>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Avg. Match Score</h4>
+                            <p class="metric-value">87%</p>
+                            <span class="metric-trend positive">+1.5%</span>
+                        </div>
+                        <div class="metric-card">
+                            <h4>User Satisfaction</h4>
+                            <p class="metric-value">4.8/5</p>
+                            <span class="metric-trend">Excellent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-tab-content" id="internships">
+                <div class="internships-management">
+                    <div class="management-header">
+                        <h3>Internship Management</h3>
+                        <div class="management-actions">
+                            <input type="search" class="form-control" placeholder="Search internships...">
+                            <select class="form-control">
+                                <option>All Status</option>
+                                <option>Active</option>
+                                <option>Pending</option>
+                                <option>Expired</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="data-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Company</th>
+                                    <th>Applications</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminInternshipsList">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-tab-content" id="users">
+                <div class="users-management">
+                    <h3>User Management</h3>
+                    <div class="users-stats">
+                        <div class="user-stat">
+                            <h4>Active Students</h4>
+                            <p>24,500,000</p>
+                        </div>
+                        <div class="user-stat">
+                            <h4>New Registrations</h4>
+                            <p>+15,000 today</p>
+                        </div>
+                        <div class="user-stat">
+                            <h4>Profile Completion</h4>
+                            <p>78% average</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-tab-content" id="companies">
+                <div class="companies-management">
+                    <h3>Company Partners</h3>
+                    <div class="companies-grid" id="adminCompaniesList">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-tab-content" id="reports">
+                <div class="reports-section">
+                    <h3>Reports & Analytics</h3>
+                    <div class="report-cards">
+                        <div class="report-card">
+                            <i class="fas fa-file-pdf"></i>
+                            <h4>Monthly Report</h4>
+                            <p>Comprehensive platform analytics</p>
+                            <button class="btn btn--outline">Download PDF</button>
+                        </div>
+                        <div class="report-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Performance Metrics</h4>
+                            <p>Key performance indicators</p>
+                            <button class="btn btn--outline">View Dashboard</button>
+                        </div>
+                        <div class="report-card">
+                            <i class="fas fa-users"></i>
+                            <h4>User Demographics</h4>
+                            <p>Student and company insights</p>
+                            <button class="btn btn--outline">Generate Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Government Integration Page -->
+    <div class="government-integration hidden" id="governmentIntegration">
+        <div class="container">
+            <div class="gov-header">
+                <div class="gov-logo">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h1>PM Internship Scheme</h1>
+                <p>Government-verified internship opportunities for Indian students</p>
+            </div>
+            
+            <div class="gov-features">
+                <div class="feature-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Government Certified</h3>
+                    <p>All internships are verified and approved by government bodies</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-check"></i>
+                    <h3>Secure & Reliable</h3>
+                    <p>Guaranteed stipends and proper documentation</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Skill Development</h3>
+                    <p>Integrated with SWAYAM and NPTEL platforms</p>
+                </div>
+            </div>
+            
+            <div class="gov-internships" id="govInternshipsList">
+                <!-- Government internships will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>InternSphere</h3>
+                    </div>
+                    <p>AI-powered internship platform connecting students with top companies worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>For Students</h4>
+                    <ul>
+                        <li><a href="#">Browse Internships</a></li>
+                        <li><a href="#">AI Recommendations</a></li>
+                        <li><a href="#">Skill Assessment</a></li>
+                        <li><a href="#">Career Guidance</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Companies</h4>
+                    <ul>
+                        <li><a href="#">Post Internships</a></li>
+                        <li><a href="#">Find Talent</a></li>
+                        <li><a href="#">Bulk Hiring</a></li>
+                        <li><a href="#">Company Branding</a></li>
+                        <li><a href="#">Analytics Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Learning Paths</a></li>
+                        <li><a href="#">Industry Reports</a></li>
+                        <li><a href="#">Salary Trends</a></li>
+                        <li><a href="#">Interview Prep</a></li>
+                        <li><a href="#">Blog & Articles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 InternSphere. All rights reserved. Made with ❤️ for students.</p>
+                    <div class="footer-badges">
+                        <span class="badge">🇮🇳 Made in India</span>
+                        <span class="badge">🏆 Award Winning</span>
+                        <span class="badge">⚡ AI Powered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading your personalized recommendations...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Auth Modal -->
+    <div class="modal-overlay hidden" id="authModalOverlay">
+        <div class="modal" id="authModal">
+            <button class="modal-close" id="closeAuthModal">&times;</button>
+            <div class="modal-content">
+                <div class="auth-tabs">
+                    <button class="auth-tab-btn active" data-tab="signin">Sign In</button>
+                    <button class="auth-tab-btn" data-tab="signup">Sign Up</button>
+                </div>
+                <div class="auth-form-container">
+                    <!-- Sign In Form -->
+                    <form class="auth-form active" id="signInForm">
+                        <h3>Welcome Back!</h3>
+                        <p>Sign in to access your dashboard.</p>
+                        <button type="button" class="btn btn--outline btn--full-width btn--google" id="googleSignInBtn">
+                            <i class="fab fa-google"></i> Sign In with Google
+                        </button>
+                        <div class="form-divider"><span>OR</span></div>
+                        <div class="form-group">
+                            <label for="signInEmail">Email</label>
+                            <input type="email" id="signInEmail" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signInPassword">Password</label>
+                            <input type="password" id="signInPassword" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Sign In</button>
+                        <p class="form-switch-text">Don't have an account? <a href="#" data-tab="signup">Sign Up</a></p>
+                    </form>
+                    <!-- Sign Up Form -->
+                    <form class="auth-form" id="signUpForm">
+                        <h3>Create Your Account</h3>
+                        <p>Join InternSphere to find your dream internship.</p>
+                        <button type="button" class="btn btn--outline btn--full-width btn--google" id="googleSignUpBtn">
+                            <i class="fab fa-google"></i> Sign Up with Google
+                        </button>
+                        <div class="form-divider"><span>OR</span></div>
+                        <div class="form-group">
+                            <label for="signUpName">Full Name</label>
+                            <input type="text" id="signUpName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signUpEmail">Email</label>
+                            <input type="email" id="signUpEmail" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signUpPassword">Password</label>
+                            <input type="password" id="signUpPassword" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Create Account</button>
+                        <p class="form-switch-text">Already have an account? <a href="#" data-tab="signin">Sign In</a></p>
+                    </form>
+                    <!-- Verification Pending Screen -->
+                    <div class="auth-form" id="verificationForm">
+                        <h3>Verify Your Email</h3>
+                        <p>A 6-digit OTP has been sent to <strong id="verificationEmail"></strong>. Please enter it below to continue.</p>
+                        <div class="form-group">
+                            <label for="otpInput">Enter OTP</label>
+                            <input type="text" id="otpInput" class="form-control" required maxlength="6" pattern="\d{6}" placeholder="_ _ _ _ _ _">
+                        </div>
+                        <button type="button" class="btn btn--primary btn--full-width" id="verifyOtpBtn">Verify & Create Account</button>
+                        <p class="form-switch-text">Didn't receive the OTP? <a href="#" id="resendVerificationLink">Resend OTP</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js for Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
